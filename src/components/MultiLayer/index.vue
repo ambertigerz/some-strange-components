@@ -14,13 +14,13 @@ withDefaults(defineProps<iMultiLayer>(), {
 </script>
 
 <template>
-  <div>
+  <div id="multi-layer-container">
     <img
       v-for="(i, index) in pics"
       :key="index"
       :src="i"
       :alt="index + ''"
-      :style="{ zIndex: 50 - index }"
+      :style="{ zIndex: 50 - index, position: 'absolute', right: 0, left: 0 }"
     />
   </div>
 </template>
@@ -28,6 +28,7 @@ withDefaults(defineProps<iMultiLayer>(), {
 <style scoped>
 #multi-layer-container {
   display: flex;
+  position: relative;
   box-sizing: border-box;
   width: v-bind(width);
   height: v-bind(height);

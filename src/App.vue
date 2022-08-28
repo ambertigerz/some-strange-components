@@ -4,7 +4,7 @@ import MultiLayer from "./components/MultiLayer/index.vue";
 
 <template>
   <div id="app">
-    <MultiLayer :pics="['1', '2', '3']" />
+    <MultiLayer :pics="['public/0.png', 'public/1.png', 'public/2.png']" />
   </div>
 </template>
 
