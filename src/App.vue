@@ -4,9 +4,16 @@ import MultiLayer from "./components/MultiLayer/index.vue";
 
 <template>
   <div id="app">
-    <MultiLayer :pics="['public/0.png', 'public/1.png', 'public/2.png']" />
+    <div style="width: 500px; height: 400px">
+      <MultiLayer :pics="[{ layerSrc: '/0.png' }, { layerSrc: '/1.png' }, { layerSrc: '/2.png' }]" />
+    </div>
   </div>
 </template>
 
 <style scoped>
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 </style>
